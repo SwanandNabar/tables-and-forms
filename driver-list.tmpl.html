@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Pic</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="driver in carVm.drivers">
+      <td><button type="button" class="btn btn-primary" ng-click="carVm.delDriver(driver.id)">&times;</button></td>
+      <td><img ng-src="{{driver.profilePic}}"></td>
+      <td>{{driver.firstName}} {{driver.lastName}} </td>
+      <td>{{driver.email}}</td>
+      <td>{{driver.address.city}}</td>
+      <td>{{driver.address.state}}</td>
+      <td>{{driver.company.name}}</td>
+    </tr>
+  </tbody>
+</table>
